@@ -1,7 +1,10 @@
 * {
   box-sizing: border-box;
 }
-
+:root {
+  --font-Heading: "Sen", san-serif;
+  --primary-color: #ffb900;
+}
 html {
   font-size: 62.5%;
 }
@@ -19,24 +22,28 @@ body {
 a {
   text-decoration: none;
 }
+.heading-lv2 {
+  font-family: var(--font-Heading);
+  line-height: 1.27;
+  font-weight: 700;
+  font-size: 3.8rem;
+  letter-spacing: -0.76px;
+}
 .btn {
   display: inline-block;
   min-width: 118px;
   padding: 0 16px;
   line-height: 50px;
   text-align: center;
-   font-weight: 600;
-   font-size: 16px;
-  color:#fff ;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
   border-radius: 24.5px;
   background: #171100;
-
-
 }
 /* header */
 .header {
-  background: #FFFCF4;
-
+  background: #fffcf4;
 }
 .header.fixed {
   position: sticky;
@@ -65,20 +72,184 @@ nav {
   text-shadow: 1px 0 0 currentColor;
   color: #171100;
 }
-.nav li.active a::after{
+.nav li.active a::after {
   position: absolute;
   left: 21px;
   bottom: 6px;
   display: block;
-    content: "";
-    width: 12px;
-    height: 2px;
-    border-radius: 1px;
-    background-color: #171100;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #171100;
 }
 header .btn-sign-up {
   min-width: 144px;
 }
 .header.action {
   margin-left: 49px;
+}
+/* hero */
+.hero {
+  padding: 56px 0 65px;
+  background: #fffcf4;
+}
+.hero .body {
+  display: flex;
+}
+.hero .media-block {
+  position: relative;
+  width: 48%;
+}
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero .hero-summary {
+  padding: 24px;
+  width: 270px;
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.hero-summary .item {
+  display: flex;
+  align-items: center;
+}
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+.hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff9e8;
+}
+.hero-summary .icon2 {
+  background: #fcefff;
+}
+.hero-summary .icon3 {
+  background: #ebeaff;
+}
+.hero-summary .info {
+  margin-left: 16px;
+}
+.hero-summary .label {
+  font-size: 1.4 rem;
+  line-height: 26px;
+  color: #5f5b53;
+}
+.hero-summary .title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  color: #171100;
+}
+
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+.hero .Heading {
+  font-family: var(--font-Heading);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 5.8 rem;
+  line-height: 1.17;
+  letter-spacing: -1.16px;
+  color: #171100;
+}
+.hero .desc {
+  margin-top: 22px;
+  font-size: 1.8 rem;
+  line-height: 1.67;
+  color: #5f5b53;
+}
+
+.hero .cta-group {
+  margin-top: 38px;
+ display: flex;
+ align-items: center;
+}
+.hero-cta {
+  min-width: 180px;
+  line-height: 64px;
+  background-color: var(--primary-color);
+}
+.hero .watch-video {
+  margin-left: 28px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+.hero .watch-video .icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+}
+.hero .watch-video span {
+font-weight: 600;
+font-size: 1.8rem;
+line-height: 1.67;
+color:#171100;
+margin-left: 14px;
+}
+.hero .stats strong {
+font-weight: 700;
+font-style: Bold;
+font-size: 44px;
+line-height: 54px;
+color: #171100;
+margin-right: 15px;
+}
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
+}
+.hero .stats {
+  margin-top: 8px;
+}
+.popular {
+  padding: 65px 0px;
+  margin-top: 135px;
+}
+.popular-top .desc {
+   margin-top: 16px;width: 458px;color: #5f5b53;font-size: 1.8rem;line-height: 1.67;
+}
+.popular-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popular-top .control-btn {
+  background: transparent;
+  justify-content: center;
+  justify-items: center;
+  width: 40px;
+height: 40px;
+border-radius: 50%;
+color: var(--primary-color);
+border: 1px solid var(--primary-color);
+}
+.popular-top .control-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+.popular-top .control {
+  display: flex;
+  gap: 18px;
 }
